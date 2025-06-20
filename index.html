@@ -25,6 +25,7 @@
       gtag("config", "G-GXFC5M76B1");
     </script>
 
+    <!--microsoft clarity-->
     <script type="text/javascript">
       (function (c, l, a, r, i, t, y) {
         c[a] =
@@ -50,6 +51,7 @@
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
+            <li><a href="blog.html">Blog</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
@@ -247,6 +249,7 @@
       <div class="container">
         <h2 class="section-title">Get In Touch</h2>
         <div class="contact-container">
+          <!-- Contact Info (Left Side) -->
           <div class="contact-info">
             <div class="contact-item">
               <div class="contact-icon">
@@ -293,45 +296,45 @@
             </div>
           </div>
 
+          <!-- Google Form (Right Side) -->
           <div class="contact-form">
-            <form id="contactForm">
-              <div class="form-group">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Your Name"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <input
-                  type="email"
-                  class="form-control"
-                  placeholder="Your Email"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Subject"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <textarea
-                  class="form-control"
-                  placeholder="Your Message"
-                  required
-                ></textarea>
-              </div>
-              <button type="submit" class="btn">Send Message</button>
-            </form>
+            <iframe
+              src="https://docs.google.com/forms/d/e/1FAIpQLScnCoWb2GM4RA-c7SAbC9JYcTIwc4LxxXJCfu8UElFpPMGF1Q/viewform?embedded=true"
+              width="100%"
+              height="719"
+              frameborder="0"
+              marginheight="0"
+              marginwidth="0"
+              >Loading…</iframe
+            >
           </div>
         </div>
       </div>
     </section>
+
+    <script>
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", async function (e) {
+          e.preventDefault();
+          const formData = {
+            name: this.name.value,
+            email: this.email.value,
+            message: this.message.value,
+          };
+          const response = await fetch("http://localhost:3000/contact", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(formData),
+          });
+          if (response.ok) {
+            alert("Thank you for your message!");
+            this.reset();
+          } else {
+            alert("There was an error sending your message.");
+          }
+        });
+    </script>
 
     <!-- Footer -->
     <footer>
@@ -360,6 +363,7 @@
               <li><a href="#about">About</a></li>
               <li><a href="#skills">Skills</a></li>
               <li><a href="#projects">Projects</a></li>
+              <li><a href="blog.html">Blog</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
           </div>
