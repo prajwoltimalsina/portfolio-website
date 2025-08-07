@@ -222,6 +222,27 @@
         margin-bottom: 20px;
       }
 
+      /* Colorful icon styles */
+      .skill-icon .fas.fa-code {
+        color: #e74c3c;
+      }
+
+      .skill-icon .fas.fa-database {
+        color: #f39c12;
+      }
+
+      .skill-icon .fas.fa-brain {
+        color: #9b59b6;
+      }
+
+      .skill-icon .fas.fa-mobile-alt {
+        color: #3498db;
+      }
+
+      .skill-icon .fas.fa-server {
+        color: #27ae60;
+      }
+
       .skill-title {
         font-size: 20px;
         font-weight: 600;
@@ -267,6 +288,23 @@
         justify-content: center;
         color: #999;
         font-size: 18px;
+      }
+
+      /* Colorful project icon styles */
+      .project-img .fas.fa-chart-pie {
+        color: #e74c3c;
+      }
+
+      .project-img .fas.fa-briefcase {
+        color: #f39c12;
+      }
+
+      .project-img .fas.fa-music {
+        color: #9b59b6;
+      }
+
+      .project-img .fas.fa-heartbeat {
+        color: #e74c3c;
       }
 
       .project-content {
@@ -332,6 +370,27 @@
         display: flex;
         align-items: center;
         justify-content: center;
+      }
+
+      /* Colorful contact icon styles */
+      .contact-icon .fas.fa-map-marker-alt {
+        color: #e74c3c;
+        background-color: rgba(231, 76, 60, 0.1);
+      }
+
+      .contact-icon .fas.fa-envelope {
+        color: #3498db;
+        background-color: rgba(52, 152, 219, 0.1);
+      }
+
+      .contact-icon .fas.fa-phone-alt {
+        color: #27ae60;
+        background-color: rgba(39, 174, 96, 0.1);
+      }
+
+      .contact-icon .fab.fa-github {
+        color: #333;
+        background-color: rgba(51, 51, 51, 0.1);
       }
 
       .contact-text h3 {
